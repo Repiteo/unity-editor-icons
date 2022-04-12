@@ -11,48 +11,11 @@ namespace Halak
 {
     public static class IconMiner
     {
-        [MenuItem("Unity Editor Icons/Export All %e", priority = -1001)]
-        private static void ExportIcons()
-        {
-            EditorUtility.DisplayProgressBar("Export Icons", "Exporting...", 0.0f);
-            try
-            {
-                var editorAssetBundle = GetEditorAssetBundle();
-                var iconsPath = GetIconsPath();
-                var count = 0;
-                foreach (var assetName in EnumerateIcons(editorAssetBundle, iconsPath))
-                {
-                    var icon = editorAssetBundle.LoadAsset<Texture2D>(assetName);
-                    if (icon == null)
-                        continue;
-
-                    var readableTexture = new Texture2D(icon.width, icon.height, icon.format, icon.mipmapCount > 1);
-
-                    Graphics.CopyTexture(icon, readableTexture);
-
-                    var folderPath = Path.GetDirectoryName(Path.Combine("icons/original/", assetName.Substring(iconsPath.Length)));
-                    if (Directory.Exists(folderPath) == false)
-                        Directory.CreateDirectory(folderPath);
-
-                    var iconPath = Path.Combine(folderPath, icon.name + ".png");
-                    File.WriteAllBytes(iconPath, readableTexture.EncodeToPNG());
-
-                    count++;
-                }
-
-                Debug.Log($"{count} icons has been exported!");
-            }
-            finally
-            {
-                EditorUtility.ClearProgressBar();
-            }
-        }
-
         [MenuItem("Unity Editor Icons/Generate README.md %g", priority = -1000)]
         private static void GenerateREADME()
         {
             var guidMaterial = new Material(Shader.Find("Unlit/Texture"));
-            var guidMaterialId = "Assets/Editor/GuidMaterial.mat";
+            var guidMaterialId = "Assets/Editor/_GuidMaterial.mat";
             AssetDatabase.CreateAsset(guidMaterial, guidMaterialId);
 
             EditorUtility.DisplayProgressBar("Generate README.md", "Generating...", 0.0f);
@@ -61,6 +24,9 @@ namespace Halak
                 var editorAssetBundle = GetEditorAssetBundle();
                 var iconsPath = GetIconsPath();
                 var readmeContents = new StringBuilder();
+
+                const string temp = "Temp/";
+                FileUtil.DeleteFileOrDirectory(temp + iconsPath);
 
                 readmeContents.AppendLine($"Unity Editor Built-in Icons");
                 readmeContents.AppendLine($"==============================");
@@ -82,7 +48,7 @@ namespace Halak
                 {
                     var assetName = assetNames[i];
                     var icon = editorAssetBundle.LoadAsset<Texture2D>(assetName);
-                    if (icon == null)
+                    if (!icon)
                         continue;
 
                     EditorUtility.DisplayProgressBar("Generate README.md", $"Generating... ({i + 1}/{assetNames.Length})", (float)i / assetNames.Length);
@@ -91,32 +57,66 @@ namespace Halak
 
                     Graphics.CopyTexture(icon, readableTexture);
 
-                    var folderPath = Path.GetDirectoryName(Path.Combine("icons/small/", assetName.Substring(iconsPath.Length)));
-                    if (Directory.Exists(folderPath) == false)
-                        Directory.CreateDirectory(folderPath);
+                    var folderPath = Path.GetDirectoryName(Path.Combine(iconsPath, assetName.Substring(iconsPath.Length)));
+                    if (!Directory.Exists(temp + folderPath))
+                        Directory.CreateDirectory(temp + folderPath);
 
                     var iconPath = Path.Combine(folderPath, icon.name + ".png");
-                    File.WriteAllBytes(iconPath, readableTexture.EncodeToPNG());
+                    File.WriteAllBytes(temp + iconPath, readableTexture.EncodeToPNG());
 
-                    //
                     guidMaterial.mainTexture = icon;
                     EditorUtility.SetDirty(guidMaterial);
                     AssetDatabase.SaveAssets();
                     var fileId = GetFileId(guidMaterialId);
 
                     var escapedUrl = iconPath.Replace(" ", "%20").Replace('\\', '/');
-                    readmeContents.AppendLine($"| ![]({escapedUrl}) | `{icon.name}` | `{fileId}` |");
+                    var thumbnail = ClampIcon(icon, out var w, out var h) ? $"[<img src=\"{escapedUrl}\" width=\"{w}px\" height=\"{h}px\">]" : $"![]";
+                    readmeContents.AppendLine($"| {thumbnail}({escapedUrl} \"{icon.width}×{icon.height}\") | `{icon.name}` | `{fileId}` |");
                 }
 
-                File.WriteAllText("README.md", readmeContents.ToString());
+                FileUtil.ReplaceDirectory(temp + iconsPath, iconsPath);
 
-                Debug.Log($"'READMD.md' has been generated.");
+                File.WriteAllText("README.md", FormatContents(readmeContents));
+
+                Debug.Log($"'README.md' has been generated, with {assetNames.Length} icons exported");
             }
             finally
             {
                 EditorUtility.ClearProgressBar();
                 AssetDatabase.DeleteAsset(guidMaterialId);
             }
+        }
+
+        private static string FormatContents(StringBuilder contents)
+        {
+            var eol = string.Empty;
+            switch (EditorSettings.lineEndingsForNewScripts)
+            {
+                case LineEndingsMode.OSNative:
+                default:
+                    eol = Environment.NewLine;
+                    break;
+                case LineEndingsMode.Unix:
+                    eol = "\n";
+                    break;
+                case LineEndingsMode.Windows:
+                    eol = "\r\n";
+                    break;
+            }
+            return contents.ToString().Replace("\r\n", "\n").Replace("\n\r", "\n").Replace("\r", "\n").Replace("\n", eol);
+        }
+
+        private static bool ClampIcon(Texture2D icon, out int w, out int h)
+        {
+            w = icon.width;
+            h = icon.height;
+            const int max = 32;
+            if (w <= max && h <= max)
+                return false;
+            var div = MathF.Max(w, h) / max;
+            w = (int)(w / div);
+            h = (int)(h / div);
+            return true;
         }
 
         private static IEnumerable<string> EnumerateIcons(AssetBundle editorAssetBundle, string iconsPath)

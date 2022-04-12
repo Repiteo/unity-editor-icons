@@ -8,3 +8,4 @@ Temp/
 UserSettings/
 *.sln
 *.csproj
+Assets/Editor/_*
