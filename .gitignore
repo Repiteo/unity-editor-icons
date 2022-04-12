@@ -1,9 +1,10 @@
 .vs/
+.vscode/
 bin/
 obj/
 Library/
 Logs/
 Temp/
-icons/original/
+UserSettings/
 *.sln
 *.csproj
