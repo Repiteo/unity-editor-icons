@@ -1,6 +1,6 @@
 Unity Editor Built-in Icons
 ==============================
-Unity version: 2021.2.9f1
+Unity version: 2021.3.1f1
 Icons what can load using `EditorGUIUtility.IconContent`
 
 File ID
