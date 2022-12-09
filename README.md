@@ -1,6 +1,6 @@
 Unity Editor Built-in Icons
 ==============================
-Unity version: 2022.1.16f1
+Unity version: 2022.2.0b16
 Icons what can load using `EditorGUIUtility.IconContent`
 
 File ID
@@ -165,12 +165,12 @@ You can change script icon by file id
 | ![](Icons/BuildSettings.iPhone.Small.png "16×16") | `BuildSettings.iPhone.Small` | `4345870033486632634` |
 | ![](Icons/BuildSettings.iPhone.Small@2x.png "32×32") | `BuildSettings.iPhone.Small@2x` | `-5634524864065029246` |
 | [<img src="Icons/BuildSettings.iPhone@2x.png" width="32px" height="32px">](Icons/BuildSettings.iPhone@2x.png "64×64") | `BuildSettings.iPhone@2x` | `6987697712259842190` |
-| ![](Icons/BuildSettings.LinuxHeadlessSimulation%20On.png "32×32") | `BuildSettings.LinuxHeadlessSimulation On` | `124732134353504189` |
-| [<img src="Icons/BuildSettings.LinuxHeadlessSimulation%20On@2x.png" width="32px" height="32px">](Icons/BuildSettings.LinuxHeadlessSimulation%20On@2x.png "64×64") | `BuildSettings.LinuxHeadlessSimulation On@2x` | `6506191285370054043` |
-| ![](Icons/BuildSettings.LinuxHeadlessSimulation.png "32×32") | `BuildSettings.LinuxHeadlessSimulation` | `3823103357871925486` |
-| ![](Icons/BuildSettings.LinuxHeadlessSimulation.Small.png "16×16") | `BuildSettings.LinuxHeadlessSimulation.Small` | `-2748458242882128925` |
-| ![](Icons/BuildSettings.LinuxHeadlessSimulation.Small@2x.png "32×32") | `BuildSettings.LinuxHeadlessSimulation.Small@2x` | `650435769564426834` |
-| [<img src="Icons/BuildSettings.LinuxHeadlessSimulation@2x.png" width="32px" height="32px">](Icons/BuildSettings.LinuxHeadlessSimulation@2x.png "64×64") | `BuildSettings.LinuxHeadlessSimulation@2x` | `5214183152383054350` |
+| ![](Icons/BuildSettings.LinuxHeadlessSimulation%20On.png "32×32") | `BuildSettings.LinuxHeadlessSimulation On` | `-7513381595562638541` |
+| [<img src="Icons/BuildSettings.LinuxHeadlessSimulation%20On@2x.png" width="32px" height="32px">](Icons/BuildSettings.LinuxHeadlessSimulation%20On@2x.png "64×64") | `BuildSettings.LinuxHeadlessSimulation On@2x` | `-4400627701946926389` |
+| ![](Icons/BuildSettings.LinuxHeadlessSimulation.png "32×32") | `BuildSettings.LinuxHeadlessSimulation` | `-8957706314130457392` |
+| ![](Icons/BuildSettings.LinuxHeadlessSimulation.Small.png "16×16") | `BuildSettings.LinuxHeadlessSimulation.Small` | `7705685685023676459` |
+| ![](Icons/BuildSettings.LinuxHeadlessSimulation.Small@2x.png "32×32") | `BuildSettings.LinuxHeadlessSimulation.Small@2x` | `6676424620479421655` |
+| [<img src="Icons/BuildSettings.LinuxHeadlessSimulation@2x.png" width="32px" height="32px">](Icons/BuildSettings.LinuxHeadlessSimulation@2x.png "64×64") | `BuildSettings.LinuxHeadlessSimulation@2x` | `-8985081934903617673` |
 | ![](Icons/BuildSettings.Lumin%20On.png "32×32") | `BuildSettings.Lumin On` | `-7421784102139658696` |
 | [<img src="Icons/BuildSettings.Lumin%20On@2x.png" width="32px" height="32px">](Icons/BuildSettings.Lumin%20On@2x.png "64×64") | `BuildSettings.Lumin On@2x` | `2998448140356953732` |
 | ![](Icons/BuildSettings.Lumin.png "32×32") | `BuildSettings.Lumin` | `-5215224591671759445` |
@@ -438,10 +438,10 @@ You can change script icon by file id
 | ![](Icons/d_BuildSettings.iPhone.Small.png "16×16") | `d_BuildSettings.iPhone.Small` | `-1080992744858828460` |
 | ![](Icons/d_BuildSettings.iPhone.Small@2x.png "32×32") | `d_BuildSettings.iPhone.Small@2x` | `4152198871333242844` |
 | [<img src="Icons/d_BuildSettings.iPhone@2x.png" width="32px" height="32px">](Icons/d_BuildSettings.iPhone@2x.png "64×64") | `d_BuildSettings.iPhone@2x` | `-8260825193331817229` |
-| ![](Icons/d_BuildSettings.LinuxHeadlessSimulation.png "32×32") | `d_BuildSettings.LinuxHeadlessSimulation` | `1131711649262303740` |
-| ![](Icons/d_BuildSettings.LinuxHeadlessSimulation.Small.png "16×16") | `d_BuildSettings.LinuxHeadlessSimulation.Small` | `-111726430553142616` |
-| ![](Icons/d_BuildSettings.LinuxHeadlessSimulation.Small@2x.png "32×32") | `d_BuildSettings.LinuxHeadlessSimulation.Small@2x` | `-3724849431531057996` |
-| [<img src="Icons/d_BuildSettings.LinuxHeadlessSimulation@2x.png" width="32px" height="32px">](Icons/d_BuildSettings.LinuxHeadlessSimulation@2x.png "64×64") | `d_BuildSettings.LinuxHeadlessSimulation@2x` | `4228847304324247975` |
+| ![](Icons/d_BuildSettings.LinuxHeadlessSimulation.png "32×32") | `d_BuildSettings.LinuxHeadlessSimulation` | `-6928787078081158267` |
+| ![](Icons/d_BuildSettings.LinuxHeadlessSimulation.Small.png "16×16") | `d_BuildSettings.LinuxHeadlessSimulation.Small` | `-6401006882625916543` |
+| ![](Icons/d_BuildSettings.LinuxHeadlessSimulation.Small@2x.png "32×32") | `d_BuildSettings.LinuxHeadlessSimulation.Small@2x` | `-4235291371007709424` |
+| [<img src="Icons/d_BuildSettings.LinuxHeadlessSimulation@2x.png" width="32px" height="32px">](Icons/d_BuildSettings.LinuxHeadlessSimulation@2x.png "64×64") | `d_BuildSettings.LinuxHeadlessSimulation@2x` | `731831657698283869` |
 | ![](Icons/d_BuildSettings.Lumin.png "32×32") | `d_BuildSettings.Lumin` | `6535942805984192183` |
 | ![](Icons/d_BuildSettings.Lumin.small.png "16×16") | `d_BuildSettings.Lumin.small` | `-2841579067038442323` |
 | ![](Icons/d_BuildSettings.Lumin.small@2x.png "32×32") | `d_BuildSettings.Lumin.small@2x` | `2381741023756229166` |
@@ -555,6 +555,18 @@ You can change script icon by file id
 | ![](Icons/d_CustomSorting.png "19×13") | `d_CustomSorting` | `395480234370563609` |
 | ![](Icons/d_CustomTool.png "16×16") | `d_CustomTool` | `5639368617152057657` |
 | ![](Icons/d_CustomTool@2x.png "32×32") | `d_CustomTool@2x` | `3919062399048514441` |
+| ![](Icons/d_DataMode.Authoring.png "16×16") | `d_DataMode.Authoring` | `-3314814539223616720` |
+| ![](Icons/d_DataMode.Authoring.Sticky.png "16×16") | `d_DataMode.Authoring.Sticky` | `-1312541278286873354` |
+| ![](Icons/d_DataMode.Authoring.Sticky@2x.png "32×32") | `d_DataMode.Authoring.Sticky@2x` | `4031160209775529541` |
+| ![](Icons/d_DataMode.Authoring@2x.png "32×32") | `d_DataMode.Authoring@2x` | `-1706030703237661756` |
+| ![](Icons/d_DataMode.Mixed.png "16×16") | `d_DataMode.Mixed` | `-3682056275656594206` |
+| ![](Icons/d_DataMode.Mixed.Sticky.png "16×16") | `d_DataMode.Mixed.Sticky` | `-6421316974282546043` |
+| ![](Icons/d_DataMode.Mixed.Sticky@2x.png "32×32") | `d_DataMode.Mixed.Sticky@2x` | `-5532933788289515416` |
+| ![](Icons/d_DataMode.Mixed@2x.png "32×32") | `d_DataMode.Mixed@2x` | `-8292143178990915874` |
+| ![](Icons/d_DataMode.Runtime.png "16×16") | `d_DataMode.Runtime` | `-2870688628503069083` |
+| ![](Icons/d_DataMode.Runtime.Sticky.png "16×16") | `d_DataMode.Runtime.Sticky` | `8923822575789657931` |
+| ![](Icons/d_DataMode.Runtime.Sticky@2x.png "32×32") | `d_DataMode.Runtime.Sticky@2x` | `-2473965051415034709` |
+| ![](Icons/d_DataMode.Runtime@2x.png "32×32") | `d_DataMode.Runtime@2x` | `6730679689466120889` |
 | ![](Icons/d_DebuggerAttached.png "16×16") | `d_DebuggerAttached` | `5563126720994373707` |
 | ![](Icons/d_DebuggerAttached@2x.png "32×32") | `d_DebuggerAttached@2x` | `1844289310244502933` |
 | ![](Icons/d_DebuggerDisabled.png "16×16") | `d_DebuggerDisabled` | `-5458696979244044411` |
@@ -601,6 +613,8 @@ You can change script icon by file id
 | ![](Icons/d_GizmosToggle%20On@2x.png "32×32") | `d_GizmosToggle On@2x` | `-6564463512198911524` |
 | ![](Icons/d_GizmosToggle.png "16×16") | `d_GizmosToggle` | `8577862951845126185` |
 | ![](Icons/d_GizmosToggle@2x.png "32×32") | `d_GizmosToggle@2x` | `-7250623444466721990` |
+| ![](Icons/d_GreenCheckmark.png "16×16") | `d_GreenCheckmark` | `1641555361472442051` |
+| ![](Icons/d_GreenCheckmark@2x.png "32×32") | `d_GreenCheckmark@2x` | `-1699155660150818322` |
 | ![](Icons/d_Grid.BoxTool.png "16×16") | `d_Grid.BoxTool` | `-344943740643441785` |
 | ![](Icons/d_Grid.BoxTool@2x.png "32×32") | `d_Grid.BoxTool@2x` | `-1600691820090266399` |
 | ![](Icons/d_Grid.Default.png "16×16") | `d_Grid.Default` | `1069608246273552248` |
@@ -629,6 +643,10 @@ You can change script icon by file id
 | ![](Icons/d_Invalid.png "16×16") | `d_Invalid` | `-6254598091745687312` |
 | ![](Icons/d_Invalid@2x.png "32×32") | `d_Invalid@2x` | `-6746276532397667986` |
 | ![](Icons/d_JointAngularLimits.png "19×19") | `d_JointAngularLimits` | `2055165929574443600` |
+| ![](Icons/d_Keyboard.png "16×16") | `d_Keyboard` | `4925678384277950291` |
+| ![](Icons/d_Keyboard@2x.png "32×32") | `d_Keyboard@2x` | `5666957688460018447` |
+| ![](Icons/d_KeyboardShortcutsDisabled.png "16×16") | `d_KeyboardShortcutsDisabled` | `2977766409931321681` |
+| ![](Icons/d_KeyboardShortcutsDisabled@2x.png "32×32") | `d_KeyboardShortcutsDisabled@2x` | `1271723339638769897` |
 | ![](Icons/d_leftBracket.png "7×18") | `d_leftBracket` | `7767883810485083697` |
 | ![](Icons/d_Lighting.png "16×16") | `d_Lighting` | `-1347227620855488341` |
 | ![](Icons/d_Lighting@2x.png "32×32") | `d_Lighting@2x` | `-1477008817101679558` |
@@ -1022,6 +1040,8 @@ You can change script icon by file id
 | ![](Icons/d_ViewToolZoom@2x.png "32×32") | `d_ViewToolZoom@2x` | `-3298639432403203932` |
 | ![](Icons/d_VisibilityOff.png "16×16") | `d_VisibilityOff` | `3795127435614206635` |
 | ![](Icons/d_VisibilityOn.png "16×16") | `d_VisibilityOn` | `-7094240123405023973` |
+| ![](Icons/d_VisualQueryBuilder.png "16×16") | `d_VisualQueryBuilder` | `2458483954629871290` |
+| ![](Icons/d_VisualQueryBuilder@2x.png "32×32") | `d_VisualQueryBuilder@2x` | `4841665948870159953` |
 | ![](Icons/d_VUMeterTextureHorizontal.png "32×2") | `d_VUMeterTextureHorizontal` | `-5604046849013387335` |
 | ![](Icons/d_VUMeterTextureVertical.png "2×32") | `d_VUMeterTextureVertical` | `-2600449814269487935` |
 | ![](Icons/d_WaitSpin00.png "16×16") | `d_WaitSpin00` | `-3701465445597994196` |
@@ -1084,6 +1104,20 @@ You can change script icon by file id
 | ![](Icons/d_winbtn_win_restore_a@2x.png "32×32") | `d_winbtn_win_restore_a@2x` | `-1241931799402032679` |
 | ![](Icons/d_winbtn_win_restore_h.png "16×16") | `d_winbtn_win_restore_h` | `3921458495664336126` |
 | ![](Icons/d_winbtn_win_restore_h@2x.png "32×32") | `d_winbtn_win_restore_h@2x` | `2540937109819858409` |
+| ![](Icons/DataMode.Authoring.png "16×16") | `DataMode.Authoring` | `6713153040819333382` |
+| ![](Icons/DataMode.Authoring.Sticky.png "16×16") | `DataMode.Authoring.Sticky` | `-1194584557656806473` |
+| ![](Icons/DataMode.Authoring.Sticky@2x.png "32×32") | `DataMode.Authoring.Sticky@2x` | `3325612875063872330` |
+| ![](Icons/DataMode.Authoring@2x.png "32×32") | `DataMode.Authoring@2x` | `2258993338897959182` |
+| ![](Icons/DataMode.Mixed.png "16×16") | `DataMode.Mixed` | `-3253408090618762416` |
+| ![](Icons/DataMode.Mixed.Sticky.png "16×16") | `DataMode.Mixed.Sticky` | `-6793488013466130987` |
+| ![](Icons/DataMode.Mixed.Sticky@2x.png "32×32") | `DataMode.Mixed.Sticky@2x` | `-7767012921580009831` |
+| ![](Icons/DataMode.Mixed@2x.png "32×32") | `DataMode.Mixed@2x` | `-6318973073145174948` |
+| ![](Icons/DataMode.Runtime.png "16×16") | `DataMode.Runtime` | `2918817017716212263` |
+| ![](Icons/DataMode.Runtime.Sticky.png "16×16") | `DataMode.Runtime.Sticky` | `7793901626801836455` |
+| ![](Icons/DataMode.Runtime.Sticky@2x.png "32×32") | `DataMode.Runtime.Sticky@2x` | `-7073160419570572543` |
+| ![](Icons/DataMode.Runtime@2x.png "32×32") | `DataMode.Runtime@2x` | `-1528998263592436864` |
+| ![](Icons/Debug_Frame_d.png "16×16") | `Debug_Frame_d` | `1283915995619438913` |
+| ![](Icons/Debug_Frame_d@2x.png "32×32") | `Debug_Frame_d@2x` | `3988132551175365234` |
 | ![](Icons/DebuggerAttached.png "16×16") | `DebuggerAttached` | `-7170190017073639716` |
 | ![](Icons/DebuggerAttached@2x.png "32×32") | `DebuggerAttached@2x` | `-5504019084107374268` |
 | ![](Icons/DebuggerDisabled.png "16×16") | `DebuggerDisabled` | `-6752520531078645004` |
@@ -1130,6 +1164,8 @@ You can change script icon by file id
 | ![](Icons/GizmosToggle%20On@2x.png "32×32") | `GizmosToggle On@2x` | `7701343433342206296` |
 | ![](Icons/GizmosToggle.png "16×16") | `GizmosToggle` | `7202653460388006389` |
 | ![](Icons/GizmosToggle@2x.png "32×32") | `GizmosToggle@2x` | `3823531632482580487` |
+| ![](Icons/GreenCheckmark.png "16×16") | `GreenCheckmark` | `-6203206191837598201` |
+| ![](Icons/GreenCheckmark@2x.png "32×32") | `GreenCheckmark@2x` | `-7647730755192563584` |
 | ![](Icons/Grid.BoxTool.png "16×16") | `Grid.BoxTool` | `-5470262736211965078` |
 | ![](Icons/Grid.BoxTool@2x.png "32×32") | `Grid.BoxTool@2x` | `6450220969105345974` |
 | ![](Icons/Grid.Default.png "16×16") | `Grid.Default` | `-7036483092075925500` |
@@ -1186,6 +1222,10 @@ You can change script icon by file id
 | ![](Icons/Invalid.png "16×16") | `Invalid` | `-2837632134304592923` |
 | ![](Icons/Invalid@2x.png "32×32") | `Invalid@2x` | `7798105442249816217` |
 | ![](Icons/JointAngularLimits.png "19×19") | `JointAngularLimits` | `1169701992620337331` |
+| ![](Icons/Keyboard.png "16×16") | `Keyboard` | `-6131513001437326570` |
+| ![](Icons/Keyboard@2x.png "32×32") | `Keyboard@2x` | `6171955102914893739` |
+| ![](Icons/KeyboardShortcutsDisabled.png "16×16") | `KeyboardShortcutsDisabled` | `-6479211325059601187` |
+| ![](Icons/KeyboardShortcutsDisabled@2x.png "32×32") | `KeyboardShortcutsDisabled@2x` | `-2604689729285861231` |
 | [<img src="Icons/KnobCShape.png" width="32px" height="32px">](Icons/KnobCShape.png "40×40") | `KnobCShape` | `6104152958405969099` |
 | ![](Icons/KnobCShapeMini.png "29×29") | `KnobCShapeMini` | `-5536043694101708221` |
 | ![](Icons/leftBracket.png "7×18") | `leftBracket` | `-175689630301374587` |
@@ -1275,10 +1315,14 @@ You can change script icon by file id
 | [<img src="Icons/packagemanager/common/Quickstart@2x.png" width="32px" height="31px">](Icons/packagemanager/common/Quickstart@2x.png "33×32") | `Quickstart@2x` | `2238250649249875563` |
 | ![](Icons/packagemanager/dark/Add-Available.png "16×16") | `Add-Available` | `-7882975406637044975` |
 | ![](Icons/packagemanager/dark/Add-Available@2x.png "32×32") | `Add-Available@2x` | `-7282774869484643807` |
+| ![](Icons/packagemanager/dark/Cancel.png "16×16") | `Cancel` | `-5519138257445821450` |
+| ![](Icons/packagemanager/dark/Cancel@2x.png "32×32") | `Cancel@2x` | `-7352103944868230162` |
 | ![](Icons/packagemanager/dark/Custom.png "16×16") | `Custom` | `-5519664601237801743` |
 | ![](Icons/packagemanager/dark/Custom@2x.png "32×32") | `Custom@2x` | `-9112991058904505087` |
 | ![](Icons/packagemanager/dark/Customized.png "16×16") | `Customized` | `-973903703320449542` |
 | ![](Icons/packagemanager/dark/Customized@2x.png "32×32") | `Customized@2x` | `-439116481690803077` |
+| ![](Icons/packagemanager/dark/Dependency.png "16×16") | `Dependency` | `-3161082149744055663` |
+| ![](Icons/packagemanager/dark/Dependency@2x.png "32×32") | `Dependency@2x` | `1188473892242179850` |
 | ![](Icons/packagemanager/dark/Download-Available.png "16×16") | `Download-Available` | `-2331844027922037381` |
 | ![](Icons/packagemanager/dark/Download-Available@2x.png "32×32") | `Download-Available@2x` | `-2590167648247948394` |
 | ![](Icons/packagemanager/dark/Error.png "16×16") | `Error` | `-1206932700789720667` |
@@ -1299,10 +1343,16 @@ You can change script icon by file id
 | ![](Icons/packagemanager/dark/Loading@2x.png "32×32") | `Loading@2x` | `1174200599957708458` |
 | ![](Icons/packagemanager/dark/Locked.png "16×16") | `Locked` | `-4374447511723320068` |
 | ![](Icons/packagemanager/dark/Locked@2x.png "32×32") | `Locked@2x` | `-2399821670699442862` |
+| ![](Icons/packagemanager/dark/More.png "16×17") | `More` | `-949534065991196189` |
+| [<img src="Icons/packagemanager/dark/More@2x.png" width="31px" height="32px">](Icons/packagemanager/dark/More@2x.png "32×33") | `More@2x` | `-557628960684594794` |
 | ![](Icons/packagemanager/dark/MultiSelectFeature.png "14×15") | `MultiSelectFeature` | `4109020720013462805` |
 | ![](Icons/packagemanager/dark/MultiSelectFeature@2x.png "28×29") | `MultiSelectFeature@2x` | `-7111961169635194419` |
 | ![](Icons/packagemanager/dark/Package.png "16×16") | `Package` | `2012693553114710932` |
 | ![](Icons/packagemanager/dark/Package@2x.png "32×32") | `Package@2x` | `-7407954342322818126` |
+| ![](Icons/packagemanager/dark/Pause.png "16×16") | `Pause` | `3357787248931773537` |
+| ![](Icons/packagemanager/dark/Pause@2x.png "32×32") | `Pause@2x` | `6344707952674539687` |
+| ![](Icons/packagemanager/dark/Play.png "16×16") | `Play` | `7649982976759806404` |
+| ![](Icons/packagemanager/dark/Play@2x.png "32×32") | `Play@2x` | `-1081713503965802771` |
 | ![](Icons/packagemanager/dark/Refresh.png "16×16") | `Refresh` | `-447942956131276855` |
 | ![](Icons/packagemanager/dark/Refresh@2x.png "32×32") | `Refresh@2x` | `-4282781367899890149` |
 | ![](Icons/packagemanager/dark/Unlocked.png "16×16") | `Unlocked` | `1425154519526530328` |
@@ -1313,10 +1363,14 @@ You can change script icon by file id
 | ![](Icons/packagemanager/dark/Warning@2x.png "32×32") | `Warning@2x` | `-627304555572474643` |
 | ![](Icons/packagemanager/light/Add-Available.png "16×16") | `Add-Available` | `-3266479738145358097` |
 | ![](Icons/packagemanager/light/Add-Available@2x.png "32×32") | `Add-Available@2x` | `-8792854135393958103` |
+| ![](Icons/packagemanager/light/Cancel.png "16×16") | `Cancel` | `-6048058823402128159` |
+| ![](Icons/packagemanager/light/Cancel@2x.png "32×32") | `Cancel@2x` | `9117585866246663713` |
 | ![](Icons/packagemanager/light/Custom.png "16×16") | `Custom` | `8192115626559006272` |
 | ![](Icons/packagemanager/light/Custom@2x.png "32×32") | `Custom@2x` | `8279358381794498049` |
 | ![](Icons/packagemanager/light/Customized.png "16×16") | `Customized` | `-5009145360731223040` |
 | ![](Icons/packagemanager/light/Customized@2x.png "32×32") | `Customized@2x` | `878492355646121427` |
+| ![](Icons/packagemanager/light/Dependency.png "17×17") | `Dependency` | `2893090417498508106` |
+| [<img src="Icons/packagemanager/light/Dependency@2x.png" width="32px" height="32px">](Icons/packagemanager/light/Dependency@2x.png "33×33") | `Dependency@2x` | `-1733431017835079431` |
 | ![](Icons/packagemanager/light/Download-Available.png "16×16") | `Download-Available` | `-4941979212973664135` |
 | ![](Icons/packagemanager/light/Download-Available@2x.png "32×32") | `Download-Available@2x` | `-3108495770648099554` |
 | ![](Icons/packagemanager/light/Error.png "16×16") | `Error` | `-1093292119200880466` |
@@ -1339,10 +1393,16 @@ You can change script icon by file id
 | ![](Icons/packagemanager/light/Loading@2x.png "32×32") | `Loading@2x` | `4345216535031777781` |
 | ![](Icons/packagemanager/light/Locked.png "16×16") | `Locked` | `1525486278179658202` |
 | ![](Icons/packagemanager/light/Locked@2x.png "32×32") | `Locked@2x` | `771862435094109860` |
+| ![](Icons/packagemanager/light/More.png "16×17") | `More` | `-5780560188392537807` |
+| [<img src="Icons/packagemanager/light/More@2x.png" width="31px" height="32px">](Icons/packagemanager/light/More@2x.png "32×33") | `More@2x` | `6848015237940817381` |
 | ![](Icons/packagemanager/light/MultiSelectFeature.png "14×14") | `MultiSelectFeature` | `-7423167965397083479` |
 | ![](Icons/packagemanager/light/MultiSelectFeature@2x.png "28×28") | `MultiSelectFeature@2x` | `691206200206644999` |
 | ![](Icons/packagemanager/light/Package.png "16×16") | `Package` | `9130077513296818293` |
 | ![](Icons/packagemanager/light/Package@2x.png "32×32") | `Package@2x` | `1226987765860890946` |
+| ![](Icons/packagemanager/light/Pause.png "16×16") | `Pause` | `-5377294088817967288` |
+| ![](Icons/packagemanager/light/Pause@2x.png "32×32") | `Pause@2x` | `-6401455712598504064` |
+| ![](Icons/packagemanager/light/Play.png "16×16") | `Play` | `-3092883840056809924` |
+| ![](Icons/packagemanager/light/Play@2x.png "32×32") | `Play@2x` | `6100206489309594354` |
 | ![](Icons/packagemanager/light/Refresh.png "16×16") | `Refresh` | `-6247896602299869858` |
 | ![](Icons/packagemanager/light/Refresh@2x.png "32×32") | `Refresh@2x` | `-8840061074903248347` |
 | ![](Icons/packagemanager/light/Unlocked.png "16×16") | `Unlocked` | `7393907806995991002` |
@@ -1470,6 +1530,10 @@ You can change script icon by file id
 | [<img src="Icons/processed/d_Prefab%20On%20Icon.png" width="32px" height="32px">](Icons/processed/d_Prefab%20On%20Icon.png "64×64") | `d_Prefab On Icon` | `3872058662842477159` |
 | [<img src="Icons/processed/d_PrefabModel%20Icon.png" width="32px" height="32px">](Icons/processed/d_PrefabModel%20Icon.png "256×256") | `d_PrefabModel Icon` | `-5093997336329155648` |
 | [<img src="Icons/processed/d_PrefabModel%20On%20Icon.png" width="32px" height="32px">](Icons/processed/d_PrefabModel%20On%20Icon.png "64×64") | `d_PrefabModel On Icon` | `-8774780724442719666` |
+| [<img src="Icons/processed/d_PrefabOverlayAdded%20Icon.png" width="32px" height="32px">](Icons/processed/d_PrefabOverlayAdded%20Icon.png "66×66") | `d_PrefabOverlayAdded Icon` | `-8790262832406945518` |
+| [<img src="Icons/processed/d_PrefabOverlayAdded%20On%20Icon.png" width="32px" height="32px">](Icons/processed/d_PrefabOverlayAdded%20On%20Icon.png "66×66") | `d_PrefabOverlayAdded On Icon` | `-7201387085109430433` |
+| [<img src="Icons/processed/d_PrefabOverlayRemoved%20Icon.png" width="32px" height="32px">](Icons/processed/d_PrefabOverlayRemoved%20Icon.png "66×66") | `d_PrefabOverlayRemoved Icon` | `-491142801360085541` |
+| [<img src="Icons/processed/d_PrefabOverlayRemoved%20On%20Icon.png" width="32px" height="32px">](Icons/processed/d_PrefabOverlayRemoved%20On%20Icon.png "66×66") | `d_PrefabOverlayRemoved On Icon` | `-2843823844187603545` |
 | [<img src="Icons/processed/d_PrefabVariant%20Icon.png" width="32px" height="32px">](Icons/processed/d_PrefabVariant%20Icon.png "256×256") | `d_PrefabVariant Icon` | `8597360482269930223` |
 | [<img src="Icons/processed/d_PrefabVariant%20On%20Icon.png" width="32px" height="32px">](Icons/processed/d_PrefabVariant%20On%20Icon.png "64×64") | `d_PrefabVariant On Icon` | `1343395264645340971` |
 | [<img src="Icons/processed/d_RaycastCollider%20Icon.png" width="32px" height="32px">](Icons/processed/d_RaycastCollider%20Icon.png "64×64") | `d_RaycastCollider Icon` | `5953260147515872911` |
@@ -1518,9 +1582,11 @@ You can change script icon by file id
 | [<img src="Icons/processed/Prefab%20On%20Icon.png" width="32px" height="32px">](Icons/processed/Prefab%20On%20Icon.png "64×64") | `Prefab On Icon` | `7155731870476728767` |
 | [<img src="Icons/processed/PrefabModel%20Icon.png" width="32px" height="32px">](Icons/processed/PrefabModel%20Icon.png "256×256") | `PrefabModel Icon` | `2654186429131687520` |
 | [<img src="Icons/processed/PrefabModel%20On%20Icon.png" width="32px" height="32px">](Icons/processed/PrefabModel%20On%20Icon.png "64×64") | `PrefabModel On Icon` | `2580859953510165701` |
-| [<img src="Icons/processed/PrefabOverlayAdded%20Icon.png" width="32px" height="32px">](Icons/processed/PrefabOverlayAdded%20Icon.png "64×64") | `PrefabOverlayAdded Icon` | `-639656901546412945` |
+| [<img src="Icons/processed/PrefabOverlayAdded%20Icon.png" width="32px" height="32px">](Icons/processed/PrefabOverlayAdded%20Icon.png "66×66") | `PrefabOverlayAdded Icon` | `-639656901546412945` |
+| [<img src="Icons/processed/PrefabOverlayAdded%20On%20Icon.png" width="32px" height="32px">](Icons/processed/PrefabOverlayAdded%20On%20Icon.png "66×66") | `PrefabOverlayAdded On Icon` | `-8162590024525835038` |
 | [<img src="Icons/processed/PrefabOverlayModified%20Icon.png" width="32px" height="32px">](Icons/processed/PrefabOverlayModified%20Icon.png "64×64") | `PrefabOverlayModified Icon` | `1380900709905499297` |
-| [<img src="Icons/processed/PrefabOverlayRemoved%20Icon.png" width="32px" height="32px">](Icons/processed/PrefabOverlayRemoved%20Icon.png "64×64") | `PrefabOverlayRemoved Icon` | `-3867367055818222277` |
+| [<img src="Icons/processed/PrefabOverlayRemoved%20Icon.png" width="32px" height="32px">](Icons/processed/PrefabOverlayRemoved%20Icon.png "66×66") | `PrefabOverlayRemoved Icon` | `-3867367055818222277` |
+| [<img src="Icons/processed/PrefabOverlayRemoved%20On%20Icon.png" width="32px" height="32px">](Icons/processed/PrefabOverlayRemoved%20On%20Icon.png "66×66") | `PrefabOverlayRemoved On Icon` | `-3975438698972429245` |
 | [<img src="Icons/processed/PrefabVariant%20Icon.png" width="32px" height="32px">](Icons/processed/PrefabVariant%20Icon.png "256×256") | `PrefabVariant Icon` | `484455839441822243` |
 | [<img src="Icons/processed/PrefabVariant%20On%20Icon.png" width="32px" height="32px">](Icons/processed/PrefabVariant%20On%20Icon.png "64×64") | `PrefabVariant On Icon` | `6945598456504471001` |
 | [<img src="Icons/processed/Projector%20Gizmo.png" width="32px" height="32px">](Icons/processed/Projector%20Gizmo.png "256×256") | `Projector Gizmo` | `6930349229683914701` |
@@ -2651,6 +2717,8 @@ You can change script icon by file id
 | ![](Icons/ViewToolZoom@2x.png "32×32") | `ViewToolZoom@2x` | `7469032882714426660` |
 | ![](Icons/VisibilityOff.png "16×16") | `VisibilityOff` | `7150048286184752995` |
 | ![](Icons/VisibilityOn.png "16×16") | `VisibilityOn` | `7186839043715182813` |
+| ![](Icons/VisualQueryBuilder.png "16×16") | `VisualQueryBuilder` | `-126486421761578516` |
+| ![](Icons/VisualQueryBuilder@2x.png "32×32") | `VisualQueryBuilder@2x` | `408265299344307379` |
 | ![](Icons/VUMeterTextureHorizontal.png "32×2") | `VUMeterTextureHorizontal` | `-1523762453005817639` |
 | ![](Icons/VUMeterTextureVertical.png "2×32") | `VUMeterTextureVertical` | `-711995501051180505` |
 | ![](Icons/WaitSpin00.png "16×16") | `WaitSpin00` | `-3702066783001481460` |

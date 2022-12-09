@@ -62,7 +62,7 @@ namespace Halak
                         Directory.CreateDirectory(temp + folderPath);
 
                     var iconPath = Path.Combine(folderPath, icon.name + ".png");
-                    File.WriteAllBytes(temp + iconPath, readableTexture.EncodeToPNG());
+                    File.WriteAllBytes(temp + iconPath, readableTexture.Decompress().EncodeToPNG());
 
                     guidMaterial.mainTexture = icon;
                     EditorUtility.SetDirty(guidMaterial);
@@ -104,6 +104,20 @@ namespace Halak
                     break;
             }
             return contents.ToString().Replace("\r\n", "\n").Replace("\n\r", "\n").Replace("\r", "\n").Replace("\n", eol);
+        }
+
+        public static Texture2D Decompress(this Texture2D source)
+        {
+            RenderTexture renderTex = RenderTexture.GetTemporary(source.width, source.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
+            Graphics.Blit(source, renderTex);
+            RenderTexture previous = RenderTexture.active;
+            RenderTexture.active = renderTex;
+            Texture2D readableText = new Texture2D(source.width, source.height);
+            readableText.ReadPixels(new Rect(0, 0, renderTex.width, renderTex.height), 0, 0);
+            readableText.Apply();
+            RenderTexture.active = previous;
+            RenderTexture.ReleaseTemporary(renderTex);
+            return readableText;
         }
 
         private static bool ClampIcon(Texture2D icon, out int w, out int h)
