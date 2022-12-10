@@ -1,6 +1,6 @@
 Unity Editor Built-in Icons
 ==============================
-Unity version: 2022.2.0b16
+Unity version: 2022.2.0f1
 Icons what can load using `EditorGUIUtility.IconContent`
 
 File ID
@@ -556,16 +556,16 @@ You can change script icon by file id
 | ![](Icons/d_CustomTool.png "16×16") | `d_CustomTool` | `5639368617152057657` |
 | ![](Icons/d_CustomTool@2x.png "32×32") | `d_CustomTool@2x` | `3919062399048514441` |
 | ![](Icons/d_DataMode.Authoring.png "16×16") | `d_DataMode.Authoring` | `-3314814539223616720` |
-| ![](Icons/d_DataMode.Authoring.Sticky.png "16×16") | `d_DataMode.Authoring.Sticky` | `-1312541278286873354` |
-| ![](Icons/d_DataMode.Authoring.Sticky@2x.png "32×32") | `d_DataMode.Authoring.Sticky@2x` | `4031160209775529541` |
+| ![](Icons/d_DataMode.Authoring.Sticky.png "16×16") | `d_DataMode.Authoring.Sticky` | `343646959104756894` |
+| ![](Icons/d_DataMode.Authoring.Sticky@2x.png "32×32") | `d_DataMode.Authoring.Sticky@2x` | `-6833851508663297981` |
 | ![](Icons/d_DataMode.Authoring@2x.png "32×32") | `d_DataMode.Authoring@2x` | `-1706030703237661756` |
 | ![](Icons/d_DataMode.Mixed.png "16×16") | `d_DataMode.Mixed` | `-3682056275656594206` |
-| ![](Icons/d_DataMode.Mixed.Sticky.png "16×16") | `d_DataMode.Mixed.Sticky` | `-6421316974282546043` |
-| ![](Icons/d_DataMode.Mixed.Sticky@2x.png "32×32") | `d_DataMode.Mixed.Sticky@2x` | `-5532933788289515416` |
+| ![](Icons/d_DataMode.Mixed.Sticky.png "16×16") | `d_DataMode.Mixed.Sticky` | `5875945490006378687` |
+| ![](Icons/d_DataMode.Mixed.Sticky@2x.png "32×32") | `d_DataMode.Mixed.Sticky@2x` | `515647381894256511` |
 | ![](Icons/d_DataMode.Mixed@2x.png "32×32") | `d_DataMode.Mixed@2x` | `-8292143178990915874` |
 | ![](Icons/d_DataMode.Runtime.png "16×16") | `d_DataMode.Runtime` | `-2870688628503069083` |
-| ![](Icons/d_DataMode.Runtime.Sticky.png "16×16") | `d_DataMode.Runtime.Sticky` | `8923822575789657931` |
-| ![](Icons/d_DataMode.Runtime.Sticky@2x.png "32×32") | `d_DataMode.Runtime.Sticky@2x` | `-2473965051415034709` |
+| ![](Icons/d_DataMode.Runtime.Sticky.png "16×16") | `d_DataMode.Runtime.Sticky` | `-1507912107701308185` |
+| ![](Icons/d_DataMode.Runtime.Sticky@2x.png "32×32") | `d_DataMode.Runtime.Sticky@2x` | `-7717563217125961761` |
 | ![](Icons/d_DataMode.Runtime@2x.png "32×32") | `d_DataMode.Runtime@2x` | `6730679689466120889` |
 | ![](Icons/d_DebuggerAttached.png "16×16") | `d_DebuggerAttached` | `5563126720994373707` |
 | ![](Icons/d_DebuggerAttached@2x.png "32×32") | `d_DebuggerAttached@2x` | `1844289310244502933` |
@@ -1105,16 +1105,16 @@ You can change script icon by file id
 | ![](Icons/d_winbtn_win_restore_h.png "16×16") | `d_winbtn_win_restore_h` | `3921458495664336126` |
 | ![](Icons/d_winbtn_win_restore_h@2x.png "32×32") | `d_winbtn_win_restore_h@2x` | `2540937109819858409` |
 | ![](Icons/DataMode.Authoring.png "16×16") | `DataMode.Authoring` | `6713153040819333382` |
-| ![](Icons/DataMode.Authoring.Sticky.png "16×16") | `DataMode.Authoring.Sticky` | `-1194584557656806473` |
-| ![](Icons/DataMode.Authoring.Sticky@2x.png "32×32") | `DataMode.Authoring.Sticky@2x` | `3325612875063872330` |
+| ![](Icons/DataMode.Authoring.Sticky.png "16×16") | `DataMode.Authoring.Sticky` | `-4330034960144240921` |
+| ![](Icons/DataMode.Authoring.Sticky@2x.png "32×32") | `DataMode.Authoring.Sticky@2x` | `2115647718039436248` |
 | ![](Icons/DataMode.Authoring@2x.png "32×32") | `DataMode.Authoring@2x` | `2258993338897959182` |
 | ![](Icons/DataMode.Mixed.png "16×16") | `DataMode.Mixed` | `-3253408090618762416` |
-| ![](Icons/DataMode.Mixed.Sticky.png "16×16") | `DataMode.Mixed.Sticky` | `-6793488013466130987` |
-| ![](Icons/DataMode.Mixed.Sticky@2x.png "32×32") | `DataMode.Mixed.Sticky@2x` | `-7767012921580009831` |
+| ![](Icons/DataMode.Mixed.Sticky.png "16×16") | `DataMode.Mixed.Sticky` | `2616920528250498686` |
+| ![](Icons/DataMode.Mixed.Sticky@2x.png "32×32") | `DataMode.Mixed.Sticky@2x` | `-6771027534148148689` |
 | ![](Icons/DataMode.Mixed@2x.png "32×32") | `DataMode.Mixed@2x` | `-6318973073145174948` |
 | ![](Icons/DataMode.Runtime.png "16×16") | `DataMode.Runtime` | `2918817017716212263` |
-| ![](Icons/DataMode.Runtime.Sticky.png "16×16") | `DataMode.Runtime.Sticky` | `7793901626801836455` |
-| ![](Icons/DataMode.Runtime.Sticky@2x.png "32×32") | `DataMode.Runtime.Sticky@2x` | `-7073160419570572543` |
+| ![](Icons/DataMode.Runtime.Sticky.png "16×16") | `DataMode.Runtime.Sticky` | `-5815062849081551051` |
+| ![](Icons/DataMode.Runtime.Sticky@2x.png "32×32") | `DataMode.Runtime.Sticky@2x` | `8884714859235717511` |
 | ![](Icons/DataMode.Runtime@2x.png "32×32") | `DataMode.Runtime@2x` | `-1528998263592436864` |
 | ![](Icons/Debug_Frame_d.png "16×16") | `Debug_Frame_d` | `1283915995619438913` |
 | ![](Icons/Debug_Frame_d@2x.png "32×32") | `Debug_Frame_d@2x` | `3988132551175365234` |
