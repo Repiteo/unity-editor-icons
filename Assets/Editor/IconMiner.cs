@@ -90,12 +90,12 @@ namespace Halak
         {
             clampedWidth = icon.width;
             clampedHeight = icon.height;
-            if (clampedWidth <= clampMax && clampedHeight <= clampMax)
-                return;
-
-            float div = Mathf.Max(clampedWidth, clampedHeight) / clampMax;
-            clampedWidth = (int)(clampedWidth / div);
-            clampedHeight = (int)(clampedHeight / div);
+            if (clampedWidth > clampMax || clampedHeight > clampMax)
+            {
+                var div = MathF.Max(clampedWidth, clampedHeight) / clampMax;
+                clampedWidth = (int)(clampedWidth / div);
+                clampedHeight = (int)(clampedHeight / div);
+            }
             return;
         }
 
