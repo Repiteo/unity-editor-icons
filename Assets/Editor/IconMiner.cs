@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace Halak
 {
@@ -14,99 +13,66 @@ namespace Halak
         [MenuItem("Unity Editor Icons/Generate README.md %g", priority = -1000)]
         private static void GenerateREADME()
         {
-            var guidMaterial = new Material(Shader.Find("Unlit/Texture"));
-            var guidMaterialId = "Assets/Editor/_GuidMaterial.mat";
-            AssetDatabase.CreateAsset(guidMaterial, guidMaterialId);
+            var editorAssetBundle = GetEditorAssetBundle();
+            var iconsPath = GetIconsPath();
 
-            EditorUtility.DisplayProgressBar("Generate README.md", "Generating...", 0.0f);
-            try
+            const string temp = "Temp/";
+            FileUtil.DeleteFileOrDirectory(temp + iconsPath);
+
+            var assetNames = EnumerateIcons(editorAssetBundle, iconsPath).ToArray();
+            var total = assetNames.Length;
+            var current = 0f;
+
+            using (var writer = new StreamWriter("README.md"))
             {
-                var editorAssetBundle = GetEditorAssetBundle();
-                var iconsPath = GetIconsPath();
-                var readmeContents = new StringBuilder();
+                writer.WriteLine($"Unity Editor Built-in Icons");
+                writer.WriteLine($"==============================");
+                writer.WriteLine($"Unity version: {Application.unityVersion}");
+                writer.WriteLine($"Icons what can load using `EditorGUIUtility.IconContent`");
+                writer.WriteLine();
+                writer.WriteLine($"File ID");
+                writer.WriteLine($"-------------");
+                writer.WriteLine($"You can change script icon by file id");
+                writer.WriteLine($"1. Open `*.cs.meta` in Text Editor");
+                writer.WriteLine($"2. Modify line `icon: {{instanceID: 0}}` to `icon: {{fileID: <FILE ID>, guid: 0000000000000000d000000000000000, type: 0}}`");
+                writer.WriteLine($"3. Save and focus Unity Editor");
+                writer.WriteLine();
+                writer.WriteLine($"| Icon | Name | File ID |");
+                writer.WriteLine($"|------|------|---------|");
 
-                const string temp = "Temp/";
-                FileUtil.DeleteFileOrDirectory(temp + iconsPath);
-
-                readmeContents.AppendLine($"Unity Editor Built-in Icons");
-                readmeContents.AppendLine($"==============================");
-                readmeContents.AppendLine($"Unity version: {Application.unityVersion}");
-                readmeContents.AppendLine($"Icons what can load using `EditorGUIUtility.IconContent`");
-                readmeContents.AppendLine();
-                readmeContents.AppendLine($"File ID");
-                readmeContents.AppendLine($"-------------");
-                readmeContents.AppendLine($"You can change script icon by file id");
-                readmeContents.AppendLine($"1. Open `*.cs.meta` in Text Editor");
-                readmeContents.AppendLine($"2. Modify line `icon: {{instanceID: 0}}` to `icon: {{fileID: <FILE ID>, guid: 0000000000000000d000000000000000, type: 0}}`");
-                readmeContents.AppendLine($"3. Save and focus Unity Editor");
-                readmeContents.AppendLine();
-                readmeContents.AppendLine($"| Icon | Name | File ID |");
-                readmeContents.AppendLine($"|------|------|---------|");
-
-                var assetNames = EnumerateIcons(editorAssetBundle, iconsPath).ToArray();
-                for (var i = 0; i < assetNames.Length; i++)
+                foreach (var assetName in assetNames)
                 {
-                    var assetName = assetNames[i];
+                    if (EditorUtility.DisplayCancelableProgressBar("Generate README.md", $"Generating… ({++current}/{total})", current / total))
+                        break;
+
                     var icon = editorAssetBundle.LoadAsset<Texture2D>(assetName);
                     if (!icon)
                         continue;
-
-                    EditorUtility.DisplayProgressBar("Generate README.md", $"Generating... ({i + 1}/{assetNames.Length})", (float)i / assetNames.Length);
-
-                    var readableTexture = new Texture2D(icon.width, icon.height, icon.format, icon.mipmapCount > 1);
-
-                    Graphics.CopyTexture(icon, readableTexture);
 
                     var folderPath = Path.GetDirectoryName(Path.Combine(iconsPath, assetName.Substring(iconsPath.Length)));
                     if (!Directory.Exists(temp + folderPath))
                         Directory.CreateDirectory(temp + folderPath);
 
                     var iconPath = Path.Combine(folderPath, icon.name + ".png");
-                    File.WriteAllBytes(temp + iconPath, readableTexture.Decompress().EncodeToPNG());
+                    File.WriteAllBytes(temp + iconPath, icon.Decompress());
 
-                    guidMaterial.mainTexture = icon;
-                    EditorUtility.SetDirty(guidMaterial);
-                    AssetDatabase.SaveAssets();
-                    var fileId = GetFileId(guidMaterialId);
+                    AssetDatabase.TryGetGUIDAndLocalFileIdentifier(icon, out string guid, out long localId);
+                    ClampIcon(icon, out int clampedWidth, out int clampedHeight);
 
                     var escapedUrl = iconPath.Replace(" ", "%20").Replace('\\', '/');
-                    var thumbnail = ClampIcon(icon, out var w, out var h) ? $"[<img src=\"{escapedUrl}\" width=\"{w}px\" height=\"{h}px\">]" : $"![]";
-                    readmeContents.AppendLine($"| {thumbnail}({escapedUrl} \"{icon.width}×{icon.height}\") | `{icon.name}` | `{fileId}` |");
+                    var thumbnail = $"[<img src=\"{escapedUrl}\" width=\"{clampedWidth}px\" height=\"{clampedHeight}px\">]";
+                    writer.WriteLine($"| {thumbnail}({escapedUrl} \"{icon.width}×{icon.height}\") | `{icon.name}` | `{localId}` |");
                 }
-
-                FileUtil.ReplaceDirectory(temp + iconsPath, iconsPath);
-
-                File.WriteAllText("README.md", FormatContents(readmeContents));
-
-                Debug.Log($"'README.md' has been generated, with {assetNames.Length} icons exported");
             }
-            finally
-            {
-                EditorUtility.ClearProgressBar();
-                AssetDatabase.DeleteAsset(guidMaterialId);
-            }
+
+            FileUtil.ReplaceDirectory(temp + iconsPath, iconsPath);
+
+            Debug.Log($"'README.md' has been generated, with {current} out of {total} icons exported");
+
+            EditorUtility.ClearProgressBar();
         }
 
-        private static string FormatContents(StringBuilder contents)
-        {
-            var eol = string.Empty;
-            switch (EditorSettings.lineEndingsForNewScripts)
-            {
-                case LineEndingsMode.OSNative:
-                default:
-                    eol = Environment.NewLine;
-                    break;
-                case LineEndingsMode.Unix:
-                    eol = "\n";
-                    break;
-                case LineEndingsMode.Windows:
-                    eol = "\r\n";
-                    break;
-            }
-            return contents.ToString().Replace("\r\n", "\n").Replace("\n\r", "\n").Replace("\r", "\n").Replace("\n", eol);
-        }
-
-        public static Texture2D Decompress(this Texture2D source)
+        public static byte[] Decompress(this Texture2D source)
         {
             RenderTexture renderTex = RenderTexture.GetTemporary(source.width, source.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
             Graphics.Blit(source, renderTex);
@@ -117,20 +83,20 @@ namespace Halak
             readableText.Apply();
             RenderTexture.active = previous;
             RenderTexture.ReleaseTemporary(renderTex);
-            return readableText;
+            return readableText.EncodeToPNG();
         }
 
-        private static bool ClampIcon(Texture2D icon, out int w, out int h)
+        private static void ClampIcon(Texture2D icon, out int clampedWidth, out int clampedHeight, int clampMax = 32)
         {
-            w = icon.width;
-            h = icon.height;
-            const int max = 32;
-            if (w <= max && h <= max)
-                return false;
-            var div = MathF.Max(w, h) / max;
-            w = (int)(w / div);
-            h = (int)(h / div);
-            return true;
+            clampedWidth = icon.width;
+            clampedHeight = icon.height;
+            if (clampedWidth <= clampMax && clampedHeight <= clampMax)
+                return;
+
+            float div = Mathf.Max(clampedWidth, clampedHeight) / clampMax;
+            clampedWidth = (int)(clampedWidth / div);
+            clampedHeight = (int)(clampedHeight / div);
+            return;
         }
 
         private static IEnumerable<string> EnumerateIcons(AssetBundle editorAssetBundle, string iconsPath)
