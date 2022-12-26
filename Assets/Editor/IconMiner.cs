@@ -113,19 +113,6 @@ namespace Halak
             }
         }
 
-        private static string GetFileId(string proxyAssetPath)
-        {
-            var serializedAsset = File.ReadAllText(proxyAssetPath);
-            var index = serializedAsset.IndexOf("_MainTex:", StringComparison.Ordinal);
-            if (index == -1)
-                return string.Empty;
-
-            const string FileId = "fileID:";
-            var startIndex = serializedAsset.IndexOf(FileId, index) + FileId.Length;
-            var endIndex = serializedAsset.IndexOf(',', startIndex);
-            return serializedAsset.Substring(startIndex, endIndex - startIndex).Trim();
-        }
-
         private static AssetBundle GetEditorAssetBundle()
         {
             var editorGUIUtility = typeof(EditorGUIUtility);
