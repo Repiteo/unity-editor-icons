@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
+using ImageMagick;
 
 namespace Halak
 {
@@ -70,6 +71,53 @@ namespace Halak
             Debug.Log($"'README.md' has been generated, with {current} out of {total} icons exported");
 
             EditorUtility.ClearProgressBar();
+        }
+
+        [MenuItem("Unity Editor Icons/Generate .ico %h", priority = -1000)]
+        private static void GenerateIco()
+        {
+            var transparent = new MagickColor(0, 0, 0, 0);
+            var files = new DirectoryInfo(GetIconsPath()).GetFiles("*.png", SearchOption.AllDirectories);
+            var total = files.Length;
+            var current = 0f;
+
+            foreach (FileInfo file in files)
+            {
+                if (EditorUtility.DisplayCancelableProgressBar("Generate .ico files", $"Generating… ({++current}/{total})", current / total))
+                    break;
+
+                using (MagickImage image = new MagickImage(file))
+                {
+                    image.Extent(new MagickGeometry(Mathf.Max(image.Height, image.Width, 16)), Gravity.Center, transparent);
+                    var composite = image.CompositeIco();
+                    composite.Write(file.ToString().Replace(".png", ".ico"));
+                }
+            }
+
+            EditorUtility.ClearProgressBar();
+        }
+
+        private static MagickImageCollection CompositeIco(this MagickImage image)
+        {
+            var scales = new int[] { 256, 128, 64, 48, 40, 32, 24, 20, 16 };
+            var composite = new MagickImageCollection();
+
+            foreach (var scale in scales)
+            {
+                if (image.Height < scale)
+                    continue;
+
+                composite.Add(image.ResizeIco(scale));
+            }
+
+            return composite;
+        }
+
+        private static MagickImage ResizeIco(this MagickImage image, int value)
+        {
+            MagickImage ico = new(image.Clone());
+            ico.Resize(new MagickGeometry(value));
+            return ico;
         }
 
         public static byte[] Decompress(this Texture2D source)
